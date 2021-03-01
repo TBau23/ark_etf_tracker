@@ -9,7 +9,7 @@ connection = psycopg2.connect(host=os.getenv("DB_HOST"), database=os.getenv("DB_
 
 cursor = connection.cursor(cursor_factory=psycopg2.extras.DictCursor) # by default this returns a list of tuples, can turn rows into dict entries
 
-cursor.execute("SELECT * FROM stock")
+
 
 api = tradeapi.REST(os.getenv("API_KEY"), os.getenv("API_SECRET"), base_url=os.getenv("API_URL"))
 
